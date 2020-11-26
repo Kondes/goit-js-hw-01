@@ -8,8 +8,7 @@ if (authorization === ADMIN_PASSWORD) {
   message = 'Доступ запрещен, неверный пароль!';
 }
 
-while (authorization === null) {
-  message = 'Отменено пользователем!';
-  break;
-}
+if (authorization === null) 
+message = 'Отменено пользователем!';
+
 alert(message);
