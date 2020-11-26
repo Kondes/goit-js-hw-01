@@ -1,30 +1,31 @@
-let userInput = prompt('Введите число');
-userInput = Number(userInput);
-let total = 0;
+const country = prompt('В какую страну доставка');
+// const normalizedInput = country.toLowerCase() === 'Китай'.toLowerCase()
+// console.log(normalizedInput);
 
-for (let i = 1; i <= userInput; i += 1) {
-  total += i;
+let price;
+
+switch (country) {
+  case 'Китай':
+    price = '100';
+    break;
+
+  case 'Чили':
+    price = '250';
+    break;
+
+  case 'Австралия':
+    price = '170';
+    break;
+
+  case 'Индия':
+    price = '80';
+    break;
+
+  case 'Ямайка':
+    price = '120';
+    break;
+
+  default:
+    alert('В вашей стране доставка не доступна');
 }
-console.log(`Total= ${total}`);
-
-
-
-
-
-// const credits = 23580;
-// const pricePerDroid = 3000;
-// const number = prompt('Сколько ты хочешь купить дроидов');
-// let totalPrice = number * pricePerDroid;
-// console.log(totalPrice)
-// let restMoney = credits - number * pricePerDroid;
-
-// while (number === null) {
-//     console.log('Отменено пользователем!');
-//     break;
-//  }
- 
-//  if (totalPrice <= credits){
-// console.log(`Вы купили ${number} дроидов,на счету осталось ${restMoney} кредитов`);
-//  } else   {
-//     console.log('Недостаточно средств на счету!'); 
-//  }
+console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
