@@ -1,4 +1,4 @@
-const ADMIN_PASSWORD = 'jquerryismyjam';
+const ADMIN_PASSWORD = 'jqueryismyjam';
 const authorization = prompt('Введите пароль');
 let message;
 
