@@ -1,37 +1,38 @@
-let country = prompt('В какую страну доставка').toLowerCase();
+let country = prompt('В какую страну оформить доставку?');
 let price;
+let results;
 
-switch (country) {
-  case 'Китай'.toLowerCase():
-    price = 100;
-    country = 'Китай';
-    alert(`Доставка в ${country} будет стоить ${price} кредитов`);
-    break;
-
-  case 'Чили'.toLowerCase():
-    price = 250;
-    country = 'Чили';
-    alert(`Доставка в ${country} будет стоить ${price} кредитов`);
-    break;
-
-  case 'Австралия'.toLowerCase():
-    price = 170;
-    country = 'Австралия';
-    alert(`Доставка в ${country} будет стоить ${price} кредитов`);
-    break;
-
-  case 'Индия'.toLowerCase():
-    price = 80;
-    country = 'Индия';
-    alert(`Доставка в ${country} будет стоить ${price} кредитов`);
-    break;
-
-  case 'Ямайка'.toLowerCase():
-    price = 120;
-    country = 'Ямайка';
-    alert(`Доставка в ${country} будет стоить ${price} кредитов`);
-    break;
-
-  default:
-    alert('В вашей стране доставка не доступна');
+if (country === null) {
+  results = 'Отменено пользователем!';
+} 
+else {
+  switch (country.toLowerCase()) {
+    case 'китай':
+      price = 100;
+      country = 'Китай';
+      break;
+    case 'чили':
+      price = 250;
+      country = 'Чили';
+      break;
+    case 'австралия':
+      price = 170;
+      country = 'Австралию';
+      break;
+    case 'индия':
+      price = 80;
+      country = 'Индию';
+      break;
+    case 'ямайка':
+      price = 120;
+      country = 'Ямайку';
+      break;
+    default:
+      results = 'В вашей стране доставка не доступна';
+  }
 }
+if (!results) {
+  results = `Доставка в ${country} будет стоить ${price} кредитов`;
+}
+
+alert(results);
