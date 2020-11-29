@@ -1,12 +1,12 @@
+let input;
 let total = 0;
 do {
-  let input = prompt('Введи число');
-  if (input === null) {
-    break;
+  input = prompt("Введите число");
+  const inputToNumber = Number(input);
+  if (Number.isNaN(inputToNumber)) {
+    alert("Было введено не число, попробуйте еще раз");
+    continue;
   }
-  input = Number(input);
-  total += input;
-} while (true);
-
-alert(`Общая сумма чисел равна ${total} `);
-
+  total += inputToNumber;
+} while (input !== null);
+alert(`Общая сумма чисел равна ${total}`);
